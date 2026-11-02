@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05090d">
+  <title>The MobiusStrip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background atmosphere -->
+  <div class="background" aria-hidden="true">
+    <div class="background-stars"></div>
+  </div>
+
+  <!-- Top navigation -->
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Mobius home">MOBIUS</a>
+
+    <nav class="main-navigation" aria-label="Main navigation">
+    </nav>
+  </header>
+
+  <main id="home">
+    <!-- Main title -->
+    <section class="hero-heading" aria-labelledby="page-title">
+      <p class="eyebrow">THE</p>
+      <h1 id="page-title">MOBIUS STRIP</h1>
+      <p class="subtitle">A NON-ORIENTABLE DIMENSION</p>
+    </section>
+
+    <!-- Left information panels -->
+    <aside class="information-panels">
+      <section class="information-panel" id="theory">
+        <h2>What is a Mobius Strip?</h2>
+        <p>
+          A Möbius strip is a surface with only one continuous side and one
+          boundary, formed by joining the ends of a strip after a half twist
+          (180°).
+        </p>
+      </section>
+
+      <section class="information-panel" id="time-space">
+        <h2>Time &amp; Space</h2>
+        <p>
+          It offers a powerful analogy for the continuity of time and space,
+          where a path can return to its origin without ever crossing an edge,
+          hinting at a non-linear and cyclic nature of reality.
+        </p>
+      </section>
+    </aside>
+
+    <!-- Central holographic Möbius projection -->
+    <section class="mobius-display" aria-label="Interactive Mobius strip display">
+      <div class="projection-area">
+        <canvas id="mobius-canvas" aria-label="Three-dimensional Mobius strip"></canvas>
+
+        <div class="axis-indicator axis-y" aria-hidden="true">
+          <span class="axis-label">Y</span>
+          <span class="axis-arrow"></span>
+        </div>
+
+        <div class="axis-indicator axis-x" aria-hidden="true">
+          <span class="axis-arrow"></span>
+          <span class="axis-label">X</span>
+        </div>
+      </div>
+
+      <!-- Holographic projection platform -->
+      <div class="projection-platform" aria-hidden="true">
+        <div class="platform-grid"></div>
+        <div class="platform-rings">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Rotation and interaction controls -->
+      <div class="model-controls">
+        <button class="rotation-control" id="rotation-toggle" type="button"
+                aria-pressed="true">
+          <span class="pause-symbol" aria-hidden="true">Ⅱ</span>
+          <span>Auto Rotation</span>
+          <span class="toggle-switch" aria-hidden="true">
+            <span class="toggle-knob"></span>
+          </span>
+        </button>
+
+        <span class="control-separator" aria-hidden="true"></span>
+
+        <div class="drag-instruction">
+          <span class="mouse-symbol" aria-hidden="true"></span>
+          <span>Drag to Rotate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right dimensions panel -->
+    <aside class="dimensions-panel" aria-label="Mobius strip dimensions">
+      <h2>Dimensions</h2>
+
+      <div class="primary-dimensions">
+        <div class="dimension-row">
+          <span class="dimension-name">X :</span>
+          <span class="dimension-value" id="dimension-x">12.40 u</span>
+        </div>
+        <div class="dimension-row">
+          <span class="dimension-name">Y :</span>
+          <span class="dimension-value" id="dimension-y">6.20 u</span>
+        </div>
+      </div>
+
+      <div class="secondary-dimensions">
+        <div class="dimension-row">
+          <span class="dimension-name">Width :</span>
+          <span class="dimension-value" id="dimension-width">0.50 u</span>
+        </div>
+        <div class="dimension-row">
+          <span class="dimension-name">Radius :</span>
+          <span class="dimension-value" id="dimension-radius">5.00 u</span>
+        </div>
+        <div class="dimension-row">
+          <span class="dimension-name">Twist :</span>
+          <span class="dimension-value">180°</span>
+        </div>
+        <div class="dimension-row">
+          <span class="dimension-name">Rotation :</span>
+          <span class="dimension-value" id="dimension-rotation">127.8°</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
